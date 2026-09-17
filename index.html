@@ -17,7 +17,7 @@
 	.gxr .gxr__card{flex:0 0 calc((100% - 40px)/3);scroll-snap-align:start;background:var(--gxr-bg);border-radius:5px;padding:28px;display:flex;flex-direction:column;gap:16px;min-width:0}
 	.gxr .gxr__stars{display:flex;gap:2px;font-size:18px;color:#CBD5E1;line-height:1}
 	.gxr .gxr__stars .is-on{color:#F5A623}
-	.gxr .gxr__text{font-size:15px;line-height:1.6;color:var(--gxr-text)}
+	.gxr .gxr__text{font-size:15px;line-height:1.6;color:var(--gxr-text);overflow-wrap:break-word;hyphens:auto}
 	.gxr .gxr__text p{margin:0 0 .6em}
 	.gxr .gxr__text p:last-child{margin:0}
 	.gxr .gxr__text.is-long{display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
@@ -40,8 +40,8 @@
 	.gxr .gxr__modal{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:16px}
 	.gxr .gxr__modal[hidden]{display:none}
 	.gxr .gxr__overlay{position:absolute;inset:0;background:rgba(7,34,69,.6)}
-	.gxr .gxr__dialog{position:relative;background:#fff;border-radius:5px;width:100%;max-width:520px;max-height:calc(100vh - 32px);overflow-y:auto;padding:36px 32px 32px}
-	.gxr .gxr__close{position:absolute;top:10px;right:12px;background:none;border:0;font-size:30px;line-height:1;color:#64748B;cursor:pointer;padding:4px}
+	.gxr .gxr__dialog{position:relative;background:#fff;border-radius:5px;width:100%;max-width:520px;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain;padding:36px 32px 32px}
+	.gxr .gxr__close{position:sticky;top:0;float:right;margin:-26px -20px 0 0;width:40px;height:40px;background:#fff;border-radius:50%;border:0;z-index:2;font-size:30px;line-height:1;color:#64748B;cursor:pointer;padding:4px}
 	.gxr .gxr__dtitle{font-family:Montserrat,sans-serif;font-size:24px;font-weight:600;color:var(--gxr-dark);margin:0 0 6px}
 	.gxr .gxr__lead{margin:0 0 22px;font-size:14px;color:#64748B}
 	.gxr .gxr__form{display:flex;flex-direction:column;gap:16px}
@@ -78,6 +78,8 @@
 		.gxr .gxr__card{flex-basis:86%;padding:22px}
 		.gxr .gxr__btn{width:100%}
 		.gxr .gxr__dialog{padding:32px 20px 24px}
+		.gxr .gxr__close{margin:-24px -10px 0 0}
+		.gxr .gxr__form input[type=text],.gxr .gxr__form textarea{font-size:16px}
 	}
 	</style></head><body>
 <div class="note">Превью блока отзывов. Отзывы тестовые, отправка формы имитируется.</div>
